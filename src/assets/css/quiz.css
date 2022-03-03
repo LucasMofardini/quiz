@@ -1,0 +1,16 @@
+h1{
+    font-size: 4rem;
+}
+#section-quiz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:100vh;
+}
+ul > li{
+    padding: 10px 2.5px;
+    border: 1px solid black;
+    text-align: center;
+    margin: 5px 0;
+}
