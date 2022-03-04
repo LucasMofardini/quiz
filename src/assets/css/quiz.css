@@ -5,12 +5,29 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height:100vh;
+    /* width: 100%; */
+    /* height:100vh; */
 }
-ul > li{
+
+.box-respostas > input{
     padding: 10px 2.5px;
     border: 1px solid black;
     text-align: center;
     margin: 5px 0;
+    cursor: pointer;
+}
+ul > input.ativo{
+    background-color: black;
+    color: white;
+}
+.btn-responder{
+    padding: 10px 25px;
+    border: 1px solid black;
+    font-size: 1.1rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+.btn-responder:hover{
+    background-color: black;
+    color: white;
 }

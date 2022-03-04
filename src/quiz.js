@@ -9,7 +9,7 @@ export default function Quiz() {
             indexRespostaCerta: 1,
             respostaCerta: "2",
             respostas: [
-                "1", "2", "3", "4",
+                "TESTESTESTE", "2", "3", "4",
             ]
         },
         {
@@ -35,15 +35,19 @@ export default function Quiz() {
         respostaErrada: 0
     }
     const [resposta, setResposta] = useState(inicioResposta);
-    const clicarNaResposta = (index, indexRespostaCerta) => {
-        if (index == indexRespostaCerta) {
-            // Resposta Certa
-            console.log("resposta certa")
-        }
+    const clicarNaResposta = (index, indexRespostaCerta,) => {
+        // if (index == indexRespostaCerta) {
+        //     // Resposta Certa
+        //     console.log("resposta certa")
+        // }
 
     }
-    // console.log(perguntas);
+    const clicouNaResposta = () => {
 
+    }
+    const teste = () => {
+
+    }
     return (
         <section id="section-quiz">
             <div className="container-quiz">
@@ -52,26 +56,30 @@ export default function Quiz() {
                 </div>
                 <div className='container-quadro'>
                     {/* vai ter um map */}
-                    {perguntas.map((pergunta, index) => {
+                    {perguntas.map((pergunta, indexPai) => {
                         return (
-                            <div key={index}>
+                            <div key={indexPai}>
                                 <div className='item-pergunta'>
-                                    <h2 key={index} className={index}>{pergunta.titulo}</h2>
+                                    <h2 key={indexPai} className={indexPai}>{pergunta.titulo}</h2>
                                 </div>
                                 <div className='container-repostas'>
                                     <div className='item-resposta'>
-                                        <ul>
+                                        <ul className='box-respostas' onChange={teste}>
                                             {pergunta.respostas.map((resposta, index) => {
                                                 return (
-                                                    <li key={index} className={index == pergunta.indexRespostaCerta ? "certa" : undefined}
-                                                        onClick={() => {
-                                                            clicarNaResposta(index, pergunta.indexRespostaCerta)
-                                                        }}>
-                                                        {resposta}
+                                                    <li>
+                                                        <input value={resposta} name={indexPai} type="radio" id={indexPai + index} key={index} className={index == pergunta.indexRespostaCerta ? "certa" : undefined}
+                                                            onClick={(e) => {
+                                                                clicarNaResposta(index, pergunta.indexRespostaCerta);
+                                                            }}
+                                                        />
+                                                        <label for={indexPai + index}>{resposta}</label>
                                                     </li>
                                                 )
                                             })}
                                         </ul>
+                                        <button className="btn-responder" onClick={clicouNaResposta}>Reponder</button>
+
                                     </div>
                                 </div>
                             </div>
