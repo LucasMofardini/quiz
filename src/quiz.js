@@ -43,10 +43,10 @@ export default function Quiz() {
 
     }
     const clicouNaResposta = () => {
-
+        /* Quando a pessoa Clicar no botao da resposta certa */
     }
     const teste = () => {
-
+        /* Funcao teste para entender o onchange */
     }
     return (
         <section id="section-quiz">
